@@ -1,169 +1,250 @@
-# 👋 Hi, I'm Abdhus Sabour Habeebullah
+# Abdhus Sabour Habeebullah
 
-## Executive Consultant | Delivery Excellence | Enterprise Transformation
+**Executive Consultant | Delivery Excellence | Enterprise Transformation**
 
-<div align="center">
-  <strong>PMP® | ICP-ACC | CSM | SAFe® Agilist</strong><br>
-  <p>Transforming Organizations Through Agile, Governance & Digital Innovation</p>
-</div>
+**PMP® | ICP-ACC | CSM | SAFe® Agilist**
 
----
+Helping organizations improve delivery predictability, governance, Agile execution, release management, and transformation outcomes.
 
-## 🎯 About Me
-
-I help organizations improve **delivery excellence**, **governance frameworks**, and **enterprise transformation**. With 15+ years of experience in project management, agile delivery, and digital transformation, I partner with enterprises to build scalable, high-performing delivery organizations.
-
-**Founder** of **Sabour Axiom Excellence FZ-LLC** - A boutique consulting firm specializing in PMO governance, agile delivery, and enterprise transformation in the UAE.
+**Dubai, UAE | Available for UAE & GCC engagements**
 
 ---
 
-## 💼 Core Expertise
+## About
 
-### Consulting Services
-- ✅ **Agile Delivery** - Scrum, SAFe, Kanban implementations
-- ✅ **PMO Governance** - PMO setup, portfolio management, process optimization
-- ✅ **Release Management** - Deployment automation, release planning, CI/CD
-- ✅ **DevOps Governance** - DevOps transformation, governance frameworks
-- ✅ **Enterprise Delivery** - Large-scale program delivery, multi-team coordination
-- ✅ **Automotive Software** - Domain expertise in automotive industry delivery
+I am an executive delivery and transformation professional with 15+ years of experience across project management, Agile delivery, release management, PMO governance, DevOps, and digital transformation.
 
-### Key Capabilities
-- Program & Portfolio Management
+I work with organizations facing complex delivery challenges—helping leaders establish stronger governance, improve execution discipline, increase delivery visibility, and connect technology strategy with measurable business outcomes.
+
+My experience spans automotive software, enterprise technology, digital transformation, and international delivery environments across multiple markets.
+
+Today, I bring that practitioner experience to **Sabour Axiom Excellence FZ-LLC**, a boutique consulting firm based in the UAE.
+
+---
+
+## What I Help Organizations Achieve
+
+### Agile Delivery Excellence
+Improve Agile execution, team effectiveness, delivery flow, stakeholder alignment, and scaled delivery practices.
+
+### PMO & Delivery Governance
+Design practical governance models that provide executives with visibility, accountability, risk control, and better decision-making.
+
+### Release Management
+Strengthen release planning, readiness, dependency management, deployment governance, and software delivery coordination.
+
+### DevOps Governance
+Connect engineering execution with enterprise governance through better CI/CD practices, release controls, metrics, and operating models.
+
+### Enterprise Transformation
+Translate transformation strategy into structured execution through roadmaps, governance, operating models, and measurable outcomes.
+
+### Corporate Training & Capability Development
+Deliver practical programmes in Agile, project management, leadership, delivery excellence, PMO, and transformation.
+
+---
+
+## Selected Experience & Case Studies
+
+My portfolio combines real professional experience with independently developed frameworks and demonstration projects.
+
+### Automotive Software Release Management
+**BEV / FCEV | Multi-ECU Delivery | Release Governance**
+
+Experience coordinating complex automotive software release lifecycles across cross-functional teams, with focus on readiness, dependencies, risk management, stakeholder alignment, and delivery governance.
+
+### CI/CD & Release Automation
+**Azure DevOps | Jenkins | Git | Python | Automation**
+
+Experience improving build and release operations through automation, CI/CD pipelines, scripting, reporting, and process optimization.
+
+### Agile Delivery & Governance
+**Agile | Scrum | SAFe® | Coaching | Stakeholder Management**
+
+Experience facilitating Agile delivery, strengthening team practices, improving collaboration, and connecting Agile execution with organizational governance.
+
+### PMO & Delivery Governance
+**RAID | Metrics | Reporting | Risk | Dependencies**
+
+Experience establishing practical delivery controls, executive reporting, risk and dependency management, and governance rhythms across complex programmes.
+
+### DevOps & Release Governance
+**CI/CD | Release | Engineering Governance | Delivery Controls**
+
+Experience bridging engineering execution and delivery leadership through structured release processes, governance, automation, and delivery visibility.
+
+---
+
+## Portfolio & Evidence
+
+### [Case Studies](https://www.sabouraxiom.com/case-studies)
+Detailed, confidentiality-safe case studies based on professional experience and independent demonstration projects.
+
+### [Frameworks](https://www.sabouraxiom.com/frameworks)
+Practical frameworks for Agile delivery, PMO governance, release management, transformation, and delivery health.
+
+### [Templates](https://www.sabouraxiom.com/templates)
+Reusable tools and templates for governance, delivery management, release readiness, reporting, and project execution.
+
+### [Presentations](https://www.sabouraxiom.com/presentations)
+Selected presentations and executive-oriented materials covering delivery, Agile, transformation, and governance.
+
+### [Articles & Insights](https://www.sabouraxiom.com/insights)
+Thought leadership on Agile delivery, PMO governance, release management, technology strategy, leadership, and transformation.
+
+---
+
+## Core Competencies
+
+- Program & Project Management
+- Agile Delivery Management
+- Enterprise Agile Transformation
+- PMO Governance
+- Release Management
+- DevOps Governance
+- CI/CD & Delivery Automation
+- Risk & Dependency Management
+- Stakeholder & Executive Management
+- Delivery Metrics & KPI Design
+- Process Improvement
 - Organizational Transformation
-- Process Improvement & Optimization
 - Team Coaching & Development
-- Metrics & KPI Design
-- Digital Transformation Strategy
+- Digital Transformation
+- Automotive Software Delivery
 
 ---
 
-## 🏆 Certifications
+## Professional Certifications
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center"><strong>🏅 PMP®</strong><br>Project Management Professional</td>
-      <td align="center"><strong>🏅 ICP-ACC</strong><br>Agile Coach & Consultant</td>
-    </tr>
-    <tr>
-      <td align="center"><strong>🏅 CSM</strong><br>Certified Scrum Master</td>
-      <td align="center"><strong>🏅 SAFe®</strong><br>Scaled Agile Framework</td>
-    </tr>
-  </table>
-</div>
+| Certification | Focus |
+|---|---|
+| **PMP®** | Project & Program Management |
+| **ICP-ACC** | Agile Coaching |
+| **CSM** | Scrum & Agile Delivery |
+| **SAFe® Agilist** | Scaled Agile Transformation |
 
 ---
 
-## 📚 Featured Repositories
+## Industries & Domains
 
-### 🌟 [Sabour_Axiom_Excellence](https://github.com/abdhus-SAFE/Sabour_Axiom_Excellence)
-**Complete Business Operating System (BOS)** for consulting company operations, including strategy, training, project delivery, sales/marketing, finance, and operations documentation.
-- 16 major categories
-- 60+ subdirectories
-- Enterprise-grade templates
-- Reusable frameworks
+### Automotive Software
+BEV / FCEV · Software Delivery · Release Management · Engineering Governance
 
-### 📊 Release Management Framework
-**Comprehensive framework** for software release management, deployment automation, and release governance.
-- Release planning templates
-- Deployment checklists
-- Governance models
-- Best practices documentation
+### Enterprise Technology
+Digital Transformation · Agile Delivery · PMO · DevOps
 
-### 🛠️ PMO Toolkit
-**Complete Project Management Office toolkit** with governance models, portfolio management templates, and KPI dashboards.
-- PMO setup guides
-- Portfolio management tools
-- Reporting templates
-- Metrics & KPI dashboards
+### Banking & Financial Services
+Delivery Governance · Transformation · Technology Programmes
 
-### 🚀 Agile Delivery Templates
-**Agile delivery frameworks** including Scrum templates, SAFe resources, sprint planning tools, and team coaching materials.
-- Sprint planning templates
-- User story frameworks
-- Retrospective guides
-- Team coaching resources
+### Retail & Software
+Agile Delivery · Project Management · Technology Operations
 
 ---
 
-## 🎓 Thought Leadership
+## Sabour Axiom Excellence
 
-### Speaking & Training
-- Executive training on PMO governance and agile transformation
-- Conference speaker on digital transformation and delivery excellence
-- Corporate training facilitator for PMP, Agile, and leadership programs
-
-### Content & Publications
-- LinkedIn articles on agile, PMO, and digital transformation
-- Best practices whitepapers
-- Case studies on successful transformations
-- Industry insights and market analysis
-
----
-
-## 🚀 Services Offered
+Sabour Axiom Excellence FZ-LLC is a UAE-based boutique consulting firm focused on helping organizations improve how they plan, govern, deliver, and transform.
 
 ### Consulting
-- **Strategic Planning** - Agile transformation roadmaps
-- **PMO Setup & Governance** - Tailored PMO models for enterprises
-- **Release Management** - Deployment automation and governance
-- **DevOps Transformation** - Enterprise DevOps adoption
-- **Digital Transformation** - End-to-end digital strategy & execution
+- Agile Delivery
+- PMO Governance
+- Release Management
+- DevOps Governance
+- Enterprise Transformation
+- Delivery Assessments
 
-### Training & Development
-- **Agile Certifications** - Scrum Master, Product Owner, SAFe
-- **PMP Preparation** - Comprehensive PMP exam prep
-- **PMO Training** - PMO best practices and governance
-- **Leadership Programs** - Executive coaching and development
-- **Corporate Training** - Customized training for teams
+### Training
+- Project Management
+- PMP® Preparation
+- Agile & Scrum
+- PMO & Governance
+- Leadership & Delivery Excellence
 
-### Assessment & Advisory
-- **Maturity Assessment** - Agile, PMO, DevOps maturity evaluation
-- **Process Audit** - Release, delivery, governance process review
-- **Organizational Assessment** - Readiness for transformation
-- **Market Research** - UAE market analysis and competitive intelligence
-
----
-
-## 📊 GitHub Statistics
-
-<div align="center">
-  <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=abdhus-SAFE&show_icons=true&theme=dark&count_private=true" />
-</div>
+### Advisory
+- Delivery Health Assessments
+- Agile / PMO / DevOps Maturity Assessments
+- Release Process Reviews
+- Transformation Roadmaps
+- Delivery Operating Models
 
 ---
 
-## 🌐 Connect With Me
+## How I Work
 
-<div align="center">
-  <a href="https://www.linkedin.com/in/abdhus/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="mailto:abdhus17691@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-  <a href="https://www.sabouraxiom.ae" target="_blank">
-    <img src="https://img.shields.io/badge/Website-4CAF50?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website">
-  </a>
-</div>
+**01 — Understand**
+Understand the business challenge, operating environment, stakeholders, constraints, and desired outcomes.
 
----
+**02 — Assess**
+Evaluate current delivery practices, governance, processes, risks, dependencies, and maturity.
 
-## 💬 Let's Collaborate
+**03 — Design**
+Create a practical improvement model, roadmap, governance structure, or delivery framework.
 
-I'm always interested in:
-- **Consulting Engagements** - Agile transformation, PMO setup, digital transformation
-- **Speaking Opportunities** - Conferences, webinars, corporate training
-- **Partnerships** - Joint ventures, collaborations, strategic alliances
-- **Knowledge Sharing** - Open-source projects, best practices documentation
+**04 — Enable**
+Work with teams and leaders to implement the changes, build capability, and establish sustainable practices.
 
-**Feel free to reach out!**
+**05 — Measure**
+Track outcomes through meaningful delivery metrics, governance indicators, and business-relevant measures.
 
 ---
 
-<div align="center">
-  <p><strong>Helping organizations achieve delivery excellence through Agile, Governance & Digital Innovation</strong></p>
-  <p><em>Based in Dubai, UAE | Available for consulting globally</em></p>
-  <br>
-  <img src="https://komarev.com/ghpvc/?username=abdhus-SAFE&color=blue" alt="Profile Views">
-</div>
+## Selected Tools & Practices
+
+**Delivery & Collaboration:** Jira · Confluence · Azure DevOps · Smartsheet
+
+**Engineering & Automation:** Jenkins · Git · Gerrit · Bitbucket · Python · YAML · Conan
+
+**Delivery Practices:** Scrum · SAFe® · Kanban · Agile Coaching · PMO Governance · Release Management · CI/CD · DORA Metrics
+
+**Automotive & Quality:** ASPICE · ISO 26262 · ISO 9001 · UNECE · SUMS · OTA
+
+---
+
+## Confidentiality & Professional Experience
+
+Some case studies in this portfolio are derived from professional experience with previous employers and clients.
+
+To respect confidentiality and intellectual-property obligations:
+- Proprietary documents are not published
+- Internal screenshots are not published
+- Source code and internal scripts are not published
+- Customer, supplier, employee, and internal system information is excluded
+- Confidential architecture, metrics, URLs, and operational data are excluded
+- Case studies describe responsibilities, approaches, capabilities, and outcomes at an appropriate level of abstraction
+
+The portfolio demonstrates professional experience without disclosing confidential employer information.
+
+---
+
+## Let's Work Together
+
+If your organization is facing challenges with delivery predictability, Agile execution, PMO governance, release management, DevOps governance, or enterprise transformation, let's start with a conversation.
+
+### Consulting & Advisory
+Experienced delivery and transformation support for organizations navigating complex programmes.
+
+### Corporate Training
+Practical programmes in Agile, project management, leadership, and delivery excellence.
+
+### Partnerships
+Collaboration with consulting firms, training providers, system integrators, and organizations seeking delivery expertise.
+
+### Career & Professional Development
+Practical guidance in project management, Agile, PMP®, leadership, and career positioning.
+
+---
+
+## Connect
+
+- **LinkedIn:** [https://www.linkedin.com/in/abdhus/](https://www.linkedin.com/in/abdhus/)
+- **Email:** [abdhus@sabouraxiom.com](mailto:abdhus@sabouraxiom.com)
+- **Website:** [www.sabouraxiom.com](https://www.sabouraxiom.com)
+- **GitHub Portfolio:** [https://github.com/abdhus-SAFE/abdhussabour-portfolio](https://github.com/abdhus-SAFE/abdhussabour-portfolio)
+
+---
+
+> **Helping organizations achieve delivery excellence through Agile, Governance & Digital Innovation.**
+
+**Abdhus Sabour Habeebullah**  
+Executive Consultant | Delivery Excellence | Enterprise Transformation  
+Dubai, UAE
