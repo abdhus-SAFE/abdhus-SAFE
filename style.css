@@ -1,36 +1,84 @@
-/* Sabour Axiom Excellence — Executive Consulting Website */
+
+/* =========================================================
+   SABOUR AXIOM EXCELLENCE
+   Executive Consulting Website — Complete Stylesheet
+   ========================================================= */
+
+/* 1. Design tokens */
 
 :root {
   --ink: #10233f;
   --ink-soft: #42526a;
   --muted: #6b778c;
   --line: #dfe5ec;
+
   --paper: #ffffff;
   --paper-soft: #f6f8fb;
   --navy: #0c1d35;
+
   --accent: #b08a4a;
   --accent-dark: #8f6d38;
+  --accent-light: #d8b875;
+
   --max-width: 1180px;
   --radius: 16px;
   --shadow: 0 18px 45px rgba(16, 35, 63, 0.08);
+  --header-height: 76px;
+}
+
+/* 2. Global reset and defaults */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 14px);
 }
 
 body {
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
   color: var(--ink);
   background: var(--paper);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -38,24 +86,60 @@ a {
   text-decoration: none;
 }
 
-.container {
-  width: min(var(--max-width), calc(100% - 48px));
-  margin: 0 auto;
+button {
+  color: inherit;
 }
 
-/* Navigation */
+.container {
+  width: min(var(--max-width), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+section[id],
+.hero[id] {
+  scroll-margin-top: calc(var(--header-height) + 14px);
+}
+
+/* 3. Accessibility */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--ink);
+}
+
+/* 4. Navigation and header */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
+
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid rgba(223, 229, 236, 0.85);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 6px 24px rgba(16, 35, 63, 0.08);
 }
 
 .nav {
-  min-height: 76px;
+  min-height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,6 +153,7 @@ a {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.02em;
+  flex-shrink: 0;
 }
 
 .brand-mark {
@@ -76,6 +161,8 @@ a {
   height: 34px;
   display: grid;
   place-items: center;
+  flex-shrink: 0;
+
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--accent-dark);
@@ -86,7 +173,9 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 28px;
+
   color: var(--ink-soft);
   font-size: 14px;
   font-weight: 600;
@@ -96,25 +185,49 @@ a {
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus-visible {
   color: var(--accent-dark);
 }
 
-/* Hero */
+/* Optional mobile menu button */
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 5. Hero section */
 
 .hero {
   min-height: 720px;
   display: flex;
   align-items: center;
+
   background:
-    radial-gradient(circle at 85% 20%, rgba(176, 138, 74, 0.10), transparent 28%),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(176, 138, 74, 0.10),
+      transparent 28%
+    ),
     linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+
   border-bottom: 1px solid var(--line);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
   gap: 90px;
   align-items: center;
   padding: 92px 0;
@@ -140,6 +253,7 @@ a {
   line-height: 1.02;
   letter-spacing: -0.045em;
   font-weight: 750;
+  overflow-wrap: break-word;
 }
 
 .hero h1 span {
@@ -157,7 +271,7 @@ a {
 
 .hero-title span {
   color: var(--accent);
-  padding: 0 7px;
+  padding-inline: 7px;
 }
 
 .hero-description {
@@ -181,11 +295,18 @@ a {
   justify-content: center;
   min-height: 50px;
   padding: 0 23px;
+
   border: 1px solid transparent;
   border-radius: 8px;
+
   font-size: 14px;
   font-weight: 750;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .button:hover {
@@ -229,6 +350,8 @@ a {
   letter-spacing: 0.04em;
 }
 
+/* 6. Hero focus panel */
+
 .hero-panel {
   padding: 30px;
   border: 1px solid var(--line);
@@ -255,6 +378,7 @@ a {
 
 .focus-item strong {
   width: 28px;
+  flex-shrink: 0;
   color: var(--accent-dark);
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -265,7 +389,7 @@ a {
   font-weight: 700;
 }
 
-/* General sections */
+/* 7. General sections */
 
 .section {
   padding: 110px 0;
@@ -281,7 +405,7 @@ a {
 }
 
 .section-dark .section-label {
-  color: #d8b875;
+  color: var(--accent-light);
 }
 
 .section-heading {
@@ -306,7 +430,7 @@ a {
 
 .two-column {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 90px;
   align-items: start;
 }
@@ -320,21 +444,25 @@ a {
   margin-top: 20px;
 }
 
-/* Services */
+/* 8. Services */
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
 .service-card {
   min-height: 285px;
   padding: 30px;
+
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: #ffffff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .service-card:hover {
@@ -361,7 +489,7 @@ a {
   font-size: 14px;
 }
 
-/* Experience */
+/* 9. Experience */
 
 .experience-list {
   border-top: 1px solid var(--line);
@@ -369,7 +497,7 @@ a {
 
 .experience-item {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 90px minmax(0, 1fr);
   gap: 30px;
   padding: 34px 0;
   border-bottom: 1px solid var(--line);
@@ -396,10 +524,12 @@ a {
 .portfolio-note {
   margin-top: 52px;
   padding: 30px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper-soft);
@@ -422,29 +552,29 @@ a {
   opacity: 0.7;
 }
 
-/* Approach */
+/* 10. Approach */
 
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .approach-step {
   min-height: 240px;
-  padding: 30px 28px 20px 0;
-  margin-right: 28px;
+  padding: 30px 20px 20px 0;
+  margin-right: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .approach-step + .approach-step {
-  padding-left: 28px;
+  padding-left: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .approach-step > span {
-  color: #d8b875;
+  color: var(--accent-light);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -453,6 +583,7 @@ a {
 .approach-step h3 {
   margin-top: 42px;
   font-size: 23px;
+  line-height: 1.25;
 }
 
 .approach-step p {
@@ -461,11 +592,11 @@ a {
   font-size: 14px;
 }
 
-/* Certifications */
+/* 11. Certifications */
 
 .certification-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -485,38 +616,38 @@ a {
   color: var(--ink-soft);
 }
 
-/* Competencies */
+/* 12. Competencies */
 
 .competencies-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 0;
-  column-gap: 30px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 30px;
 }
 
 .competencies-list li {
   padding: 8px 0;
   color: var(--ink-soft);
   font-size: 15px;
+  overflow-wrap: anywhere;
 }
 
-.competencies-list li:before {
+.competencies-list li::before {
   content: "✓ ";
   color: var(--accent-dark);
   font-weight: 700;
   margin-right: 8px;
 }
 
-/* Business */
+/* 13. Business notes */
 
 .small-note {
-  font-size: 13px !important;
-  color: var(--muted) !important;
   margin-top: 20px !important;
+  color: var(--muted) !important;
+  font-size: 13px !important;
 }
 
-/* Contact */
+/* 14. Contact */
 
 .contact-section {
   padding-top: 120px;
@@ -525,12 +656,19 @@ a {
 
 .contact-box {
   max-width: 900px;
+  margin-inline: auto;
   text-align: center;
   padding: 82px 50px;
+
   border: 1px solid var(--line);
   border-radius: 24px;
+
   background:
-    radial-gradient(circle at 50% 0%, rgba(176, 138, 74, 0.12), transparent 35%),
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(176, 138, 74, 0.12),
+      transparent 35%
+    ),
     var(--paper-soft);
 }
 
@@ -551,6 +689,7 @@ a {
   border-top: 1px solid var(--line);
   color: var(--ink-soft);
   font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 .contact-info p {
@@ -562,12 +701,12 @@ a {
   font-weight: 700;
 }
 
-/* Footer */
+/* 15. Footer */
 
 .site-footer {
+  padding: 38px 0;
   color: #b9c3d1;
   background: #08182c;
-  padding: 38px 0;
 }
 
 .footer-content {
@@ -588,7 +727,7 @@ a {
 }
 
 .footer-center a:hover {
-  color: #d8b875;
+  color: var(--accent-light);
 }
 
 .site-footer strong {
@@ -605,131 +744,342 @@ a {
   text-align: right;
 }
 
-/* Responsive */
+/* 16. Tablet responsiveness */
 
-@media (max-width: 900px) {
-  .nav-links {
-    gap: 15px;
+@media (max-width: 1000px) {
+  .hero-grid {
+    gap: 48px;
   }
 
-  .hero-grid,
   .two-column {
-    grid-template-columns: 1fr;
-    gap: 55px;
+    gap: 48px;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .approach-step,
+  .approach-step + .approach-step {
+    margin-right: 0;
+    padding: 28px 20px;
+    border-left: 0;
+  }
+
+  .approach-step:nth-child(3n + 2),
+  .approach-step:nth-child(3n + 3) {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .approach-step h3 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .nav-links {
+    gap: 15px;
   }
 
   .hero {
     min-height: auto;
   }
 
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .approach-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .approach-step + .approach-step {
-    border-left: 0;
-  }
-
-  .approach-step:nth-child(3n+1) {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .approach-step:nth-child(n+4) {
-    padding-left: 28px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-  }
-}
-
-@media (max-width: 680px) {
-  .container {
-    width: min(var(--max-width), calc(100% - 30px));
-  }
-
-  .nav {
-    min-height: 68px;
-  }
-
-  .brand span:last-child {
-    display: none;
-  }
-
-  .nav-links {
-    gap: 12px;
-    font-size: 12px;
-  }
-
-  .nav-links a:nth-child(3),
-  .nav-links a:nth-child(4) {
-    display: none;
+  .hero-grid,
+  .two-column {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
   }
 
   .hero-grid {
-    padding: 70px 0;
+    padding: 76px 0;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section {
+    padding: 88px 0;
+  }
+}
+
+/* 17. Mobile responsiveness */
+
+@media (max-width: 680px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .nav {
+    min-height: var(--header-height);
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Preserve the brand text where space permits. */
+  .brand span:last-child {
+    display: inline;
+    max-width: 190px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 14px;
+    max-width: 100%;
+    font-size: 12px;
+  }
+
+  .hero-grid {
+    padding: 62px 0;
+    gap: 38px;
   }
 
   .hero h1 {
-    font-size: clamp(43px, 13vw, 62px);
+    font-size: clamp(40px, 11vw, 60px);
+    line-height: 1.06;
+  }
+
+  .hero-title {
+    margin-top: 22px;
+    font-size: 19px;
   }
 
   .hero-description {
     font-size: 16px;
   }
 
+  .hero-actions,
+  .contact-actions {
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .button {
+    min-height: 46px;
+    padding: 0 17px;
+  }
+
+  .credentials {
+    margin-top: 25px;
+  }
+
+  .hero-panel {
+    padding: 22px;
+  }
+
+  .focus-item {
+    min-height: 72px;
+    gap: 14px;
+  }
+
   .section {
     padding: 76px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 36px;
   }
 
   .section-heading h2,
   .two-column h2,
   .contact-box h2 {
-    font-size: 34px;
+    font-size: clamp(30px, 8vw, 36px);
+  }
+
+  .section-heading > p:last-child,
+  .section-copy {
+    font-size: 16px;
   }
 
   .service-grid,
   .certification-grid,
+  .competencies-list,
   .approach-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .competencies-list {
-    grid-template-columns: 1fr;
+  .service-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .service-card h3 {
+    margin-top: 25px;
   }
 
   .experience-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 10px;
+    padding: 28px 0;
+  }
+
+  .experience-item h3 {
+    font-size: 20px;
   }
 
   .portfolio-note {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .text-link {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .approach-step,
   .approach-step + .approach-step,
-  .approach-step:nth-child(3n+1),
-  .approach-step:nth-child(n+4) {
-    padding: 25px 0;
+  .approach-step:nth-child(3n + 2),
+  .approach-step:nth-child(3n + 3) {
+    min-height: auto;
     margin-right: 0;
+    padding: 25px 0;
     border-left: 0;
+    border-right: 0;
+  }
+
+  .approach-step h3 {
+    margin-top: 20px;
+    font-size: 21px;
+  }
+
+  .contact-section {
+    padding-top: 76px;
+    padding-bottom: 76px;
   }
 
   .contact-box {
-    padding: 58px 24px;
+    padding: 48px 22px;
+    border-radius: 18px;
+  }
+
+  .contact-box > p:not(.section-label) {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    padding-top: 24px;
+    margin-top: 24px;
   }
 
   .footer-content {
     flex-direction: column;
     align-items: center;
+    gap: 16px;
   }
 
   .footer-center,
   .footer-right {
     text-align: center;
+  }
+}
+
+/* 18. Very small screens */
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .brand span:last-child {
+    max-width: 145px;
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-actions .button,
+  .contact-actions .button {
+    width: 100%;
+  }
+
+  .hero-panel {
+    padding: 18px;
+  }
+
+  .contact-box {
+    padding: 38px 16px;
+  }
+}
+
+/* 19. Optional mobile navigation toggle
+   Requires .menu-toggle and #site-navigation in HTML. */
+
+@media (max-width: 680px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  #site-navigation {
+    width: 100%;
+  }
+
+  #site-navigation:not(.is-open) {
+    display: none;
+  }
+
+  #site-navigation.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0 12px;
+  }
+
+  #site-navigation a {
+    display: block;
+    padding: 10px 4px;
+  }
+}
+
+/* 20. Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .button:hover,
+  .service-card:hover {
+    transform: none;
   }
 }
