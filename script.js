@@ -1,148 +1,60 @@
-
-/*
- * Sabour Axiom Excellence
- * Lightweight Website Interactions
- *
- * Features:
- * 1. Smooth internal navigation
- * 2. Accessibility and reduced-motion support
- * 3. Sticky header scroll state
- * 4. Mobile navigation menu (optional)
- * 5. Automatic footer year
- * 6. Safe handling of missing elements
- */
-
 document.addEventListener("DOMContentLoaded", () => {
-  "use strict";
+  const header = document.querySelector(".site-header");
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+  const year = document.querySelector("#footer-year");
+  const revealItems = document.querySelectorAll(".reveal");
 
-  // --------------------------------------------------
-  // 1. Accessibility: respect reduced-motion settings
-  // --------------------------------------------------
+  if (year) year.textContent = String(new Date().getFullYear());
+  const updateHeader = () => {
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 10);
+  };
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  );
+  const closeMenu = () => {
+    if (!menuButton || !nav) return;
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
+    nav.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+  };
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      const open = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!open));
+      menuButton.setAttribute("aria-label", open ? "Open navigation" : "Close navigation");
+      nav.classList.toggle("is-open", !open);
+      document.body.classList.toggle("menu-open", !open);
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenu(); });
+    window.addEventListener("resize", () => { if (window.innerWidth > 780) closeMenu(); });
+  }
 
-  // --------------------------------------------------
-  // 2. Smooth navigation for internal anchor links
-  // --------------------------------------------------
-
-  const internalLinks = document.querySelectorAll('a[href^="#"]');
-
-  internalLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const targetId = link.getAttribute("href");
-
-      // Ignore empty anchors.
-      if (!targetId || targetId === "#") {
-        return;
-      }
-
-      let target;
-
-      // Safely handle invalid CSS selectors.
-      try {
-        target = document.querySelector(targetId);
-      } catch {
-        return;
-      }
-
-      // Allow normal browser behaviour if the target is absent.
-      if (!target) {
-        return;
-      }
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: prefersReducedMotion.matches ? "auto" : "smooth",
-        block: "start"
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, activeObserver) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          activeObserver.unobserve(entry.target);
+        }
       });
+    }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add("is-visible"));
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+      const id = link.getAttribute("href");
+      if (!id || id === "#") return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
     });
   });
-
-  // --------------------------------------------------
-  // 3. Header state when scrolling
-  // --------------------------------------------------
-
-  const header = document.querySelector(".site-header");
-
-  if (header) {
-    const updateHeader = () => {
-      header.classList.toggle("is-scrolled", window.scrollY > 12);
-    };
-
-    // Set the correct state immediately on page load.
-    updateHeader();
-
-    // Update the header while scrolling.
-    window.addEventListener("scroll", updateHeader, {
-      passive: true
-    });
-  }
-
-  // --------------------------------------------------
-  // 4. Optional mobile navigation menu
-  //
-  // Expected HTML:
-  // <button class="menu-toggle"
-  //         aria-controls="site-navigation"
-  //         aria-expanded="false">
-  //   Menu
-  // </button>
-  //
-  // <nav id="site-navigation">
-  //   ...
-  // </nav>
-  //
-  // Expected CSS:
-  // .site-navigation.is-open { display: flex; }
-  // --------------------------------------------------
-
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector("#site-navigation");
-
-  if (menuToggle && navigation) {
-    const closeMenu = () => {
-      menuToggle.setAttribute("aria-expanded", "false");
-      navigation.classList.remove("is-open");
-    };
-
-    menuToggle.addEventListener("click", () => {
-      const isExpanded =
-        menuToggle.getAttribute("aria-expanded") === "true";
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        String(!isExpanded)
-      );
-
-      navigation.classList.toggle("is-open", !isExpanded);
-    });
-
-    // Close the menu after selecting an internal link.
-    navigation.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    // Close the menu with the Escape key.
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
-    });
-  }
-
-  // --------------------------------------------------
-  // 5. Automatic copyright year
-  //
-  // Expected HTML:
-  // <span class="footer-year"></span>
-  // --------------------------------------------------
-
-  const footerYear = document.querySelector(".footer-year");
-
-  if (footerYear) {
-    footerYear.textContent = new Date().getFullYear();
-  }
 });
