@@ -249,4 +249,4 @@ Practical guidance in project management, Agile, PMP®, leadership, and career p
 Executive Consultant | Delivery Excellence | Enterprise Transformation  
 Dubai, UAE
 
-+971 55 3489 500
++971 58 2151 706
