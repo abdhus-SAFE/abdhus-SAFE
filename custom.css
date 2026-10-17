@@ -1,0 +1,53 @@
+/* custom.css — layout overrides to fix alignment issues */
+:root{--max:1200px}
+
+/* Ensure a consistent centered container */
+.container{
+  max-width:var(--max);
+  width:100%;
+  margin:0 auto;
+  padding:0 24px;
+  box-sizing:border-box;
+}
+
+/* Header/nav alignment */
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* Make nav links align horizontally and avoid wrapping */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+/* Ensure images don't add unexpected inline spacing */
+img,.portrait{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+/* Align hero and other layout grids vertically in the middle */
+.hero-layout,.experience-layout,.about-layout,.credentials-layout,.contact-layout{
+  display:grid;
+  align-items:center;
+  gap:clamp(24px,4vw,64px);
+}
+
+/* Portrait centering */
+.portrait-frame{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Prevent scroll-padding weirdness on small screens */
+@media(max-width:780px){
+  .container{padding:0 18px}
+  .hero{padding-top:56px}
+}
